@@ -5,14 +5,14 @@ import {
   Sheet,
   SheetContent,
   SheetTitle,
-  SheetDescription,
   SheetTrigger,
   SheetHeader,
 } from "@/components/ui";
-import { Bolt, House, LogIn, Menu } from "lucide-react";
+import { Bolt, House, LogIn, Menu, Euro } from "lucide-react";
 import { JSX, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const MENU_ITEMS = [
   {
@@ -21,28 +21,25 @@ const MENU_ITEMS = [
     icon: <House />,
   },
   {
-    label: "Get Started",
-    href: "/get-started",
-    icon: <Bolt />,
-  },
-  {
-    label: "Login",
-    href: "/login",
-    icon: <LogIn />,
+    label: "Pricing",
+    href: "/pricing",
+    icon: <Euro />,
   },
   {
     label: "Sign Up",
     href: "/sign-up",
-    icon: <LogIn className={`-rotate-90`} />,
+    icon: <LogIn />,
   },
 ] as const;
 
 const Header = (): JSX.Element => {
   const [sheetOpen, setSheetOpen] = useState<boolean>(false);
 
+  const pathname = usePathname();
+
   return (
     <header
-      className={`fixed max-md:px-2 max-md:mt-2 max-md:top-2 left-0 right-0 mt-5 top-5 z-50 max-w-[60rem] w-full transition-all duration-500 mx-auto`}
+      className={`${pathname === "/" ? "fixed left-0 right-0" : "sticky"} max-md:px-2 max-md:mt-2 max-md:top-2 mt-5 top-5 z-50 max-w-[60rem] w-full transition-all duration-500 mx-auto`}
     >
       <Layout className={`rounded-full border drop-shadow-xs bg-[#fcfbf9]`}>
         <div

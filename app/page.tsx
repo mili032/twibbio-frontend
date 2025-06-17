@@ -7,6 +7,7 @@ import {
   ExampleCaseStudy,
 } from "@/app/_components";
 import { FAQ } from "@/components/shared";
+import { TwibbioWidget } from "@/app/_components/twibbio-widget";
 
 const Index = (): JSX.Element => {
   return (
@@ -15,6 +16,7 @@ const Index = (): JSX.Element => {
       <Layout>
         <ProblemSolution />
         <CaseStudy />
+        <TwibbioWidget />
         <ExampleCaseStudy />
         <FAQ />
       </Layout>

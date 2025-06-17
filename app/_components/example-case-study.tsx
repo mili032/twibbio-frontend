@@ -1,5 +1,11 @@
 "use client";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui";
 import { JSX } from "react";
 import {
   MessageCircle,
@@ -18,13 +24,11 @@ const ExampleCaseStudy = (): JSX.Element => {
     "The ErgoDesk standing desk has been a game-changer for my work-from-home setup. As someone who struggled with back pain from prolonged sitting, the ability to easily switch between sitting and standing positions has made a tremendous difference. The desk's excellent build quality and straightforward assembly process were impressive. Without a doubt, it's been the best investment for my home office, significantly boosting my productivity while eliminating my back pain.";
 
   return (
-    <section className={`pt-8`}>
+    <section className={`pt-8 md:pt-16`}>
+      <h2 className="text-5xl font-bold text-center font-heading mb-8">
+        Transforming Feedback into Success Stories
+      </h2>
       <Card className="max-w-4xl mx-auto overflow-hidden">
-        <CardHeader>
-          <CardTitle className="text-3xl font-bold text-center font-heading">
-            Transforming Feedback into Success Stories
-          </CardTitle>
-        </CardHeader>
         <CardContent>
           <div className="mb-6 bg-gray-50 p-4 rounded-lg">
             <h4 className="font-medium mb-2">Raw Feedback:</h4>

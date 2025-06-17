@@ -84,101 +84,99 @@ const ProblemSolution = (): JSX.Element => {
           delivers innovative solutions
         </p>
       </div>
-
-      <div className={`mb-8 md:mb-16`}>
-        <div className={`flex items-center gap-3 mb-8`}>
-          <div
-            className={`rounded-full p-2 size-12 flex items-center justify-center bg-red-100 text-red-600`}
-          >
-            <AlertTriangle className={`h-8 w-8 text-destructive`} />
-          </div>
-          <h2 className={`text-3xl md:text-4xl font-bold font-heading`}>
-            The Problem
-          </h2>
-        </div>
-
-        <p
-          className={`text-lg mb-8 text-muted-foreground max-w-4xl !font-normal`}
-        >
-          Businesses often struggle to effectively leverage user feedback,
-          leading to missed opportunities for growth and improvement.
-          Traditional feedback systems are fragmented, difficult to analyze, and
-          fail to provide actionable insights.
-        </p>
-
-        <div className={`grid md:grid-cols-3 gap-6`}>
-          {problems.map((problem, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle className={`text-lg flex items-start gap-2`}>
-                  <AlertTriangle
-                    className={`h-5 w-5 text-destructive mt-0.5 flex-shrink-0`}
-                  />
-                  {problem.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className={`mb-3`}>
-                  {problem.description}
-                </CardDescription>
-                <Badge
-                  variant="destructive"
-                  className={`text-xs bg-red-100 text-red-800 border-red-200`}
-                >
-                  {problem.impact}
-                </Badge>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-
-      <Separator className={`my-8 md:my-16`} />
-
-      <div className={`mb-8 md:mb-16`}>
-        <div className={`flex items-center gap-3 mb-8`}>
-          <div
-            className={`rounded-full p-2 size-12 flex items-center justify-center bg-green-100`}
-          >
-            <CheckCircle className={`h-8 w-8 text-green-600`} />
+      <div className={`grid grid-cols-2 gap-10`}>
+        <div className={`col-span-2 lg:col-span-1 mb-8 md:mb-16`}>
+          <div className={`flex items-center gap-3 mb-8`}>
+            <div
+              className={`rounded-full p-2 size-12 flex items-center justify-center bg-red-100 text-red-600`}
+            >
+              <AlertTriangle className={`h-8 w-8 text-destructive`} />
+            </div>
+            <h2 className={`text-3xl md:text-4xl font-bold font-heading`}>
+              The Problem
+            </h2>
           </div>
 
-          <h2 className={`text-3xl md:text-4xl font-bold font-heading`}>
-            The Solution
-          </h2>
+          <p
+            className={`text-lg mb-8 text-muted-foreground max-w-4xl !font-normal`}
+          >
+            Businesses often struggle to effectively leverage user feedback,
+            leading to missed opportunities for growth and improvement.
+            Traditional feedback systems are fragmented, difficult to analyze,
+            and fail to provide actionable insights.
+          </p>
+
+          <div className={`grid md:grid-cols-2 gap-6`}>
+            {problems.map((problem, index) => (
+              <Card key={index} className={`md:last:w-full md:last:col-span-2`}>
+                <CardHeader>
+                  <CardTitle className={`text-lg flex items-center gap-2`}>
+                    <AlertTriangle
+                      className={`h-5 w-5 text-destructive mt-0.5 flex-shrink-0`}
+                    />
+                    {problem.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className={`mt-auto`}>
+                  <CardDescription className={`mb-3`}>
+                    {problem.description}
+                  </CardDescription>
+                  <Badge
+                    variant="destructive"
+                    className={`text-xs bg-red-100 text-red-800 border-red-200`}
+                  >
+                    {problem.impact}
+                  </Badge>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
+        <div className={`col-span-2 lg:col-span-1 mb-8 md:mb-16`}>
+          <div className={`flex items-center gap-3 mb-8`}>
+            <div
+              className={`rounded-full p-2 size-12 flex items-center justify-center bg-green-100`}
+            >
+              <CheckCircle className={`h-8 w-8 text-green-600`} />
+            </div>
 
-        <p className={`text-lg mb-8 text-muted-foreground max-w-4xl`}>
-          Twibbio provides a comprehensive platform that transforms raw feedback
-          into actionable insights, enhancing customer engagement and driving
-          innovation through intelligent analysis and seamless integration.
-        </p>
+            <h2 className={`text-3xl md:text-4xl font-bold font-heading`}>
+              The Solution
+            </h2>
+          </div>
 
-        <div className={`grid md:grid-cols-3 gap-6`}>
-          {solutions.map((solution, index) => (
-            <Card key={index}>
-              <CardHeader>
-                <CardTitle className={`text-lg flex items-start gap-2`}>
-                  <div className={`text-green-600`}>{solution.icon}</div>
-                  {solution.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className={`mb-3`}>
-                  {solution.description}
-                </CardDescription>
-                <Badge
-                  variant="secondary"
-                  className={`bg-green-100 text-green-800 border-green-200`}
-                >
-                  {solution.benefit}
-                </Badge>
-              </CardContent>
-            </Card>
-          ))}
+          <p className={`text-lg mb-8 text-muted-foreground max-w-4xl`}>
+            Twibbio provides a comprehensive platform that transforms raw
+            feedback into actionable insights, enhancing customer engagement and
+            driving innovation through intelligent analysis and seamless
+            integration.
+          </p>
+
+          <div className={`grid md:grid-cols-2 gap-6`}>
+            {solutions.map((solution, index) => (
+              <Card key={index} className={`md:last:col-span-2 md:last:w-full`}>
+                <CardHeader>
+                  <CardTitle className={`text-lg flex items-center gap-2`}>
+                    <div className={`text-green-600`}>{solution.icon}</div>
+                    {solution.title}
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className={`mt-auto`}>
+                  <CardDescription className={`mb-3`}>
+                    {solution.description}
+                  </CardDescription>
+                  <Badge
+                    variant="secondary"
+                    className={`bg-green-100 text-green-800 border-green-200`}
+                  >
+                    {solution.benefit}
+                  </Badge>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </div>
-
       <div className={`text-center`}>
         <Card
           className={`max-w-2xl mx-auto bg-gradient-to-r from-blue-50 to-purple-50 border-blue-200`}
