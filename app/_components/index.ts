@@ -1,4 +1,5 @@
 export { Hero } from "./hero";
-export { ProblemSolution } from "./problem-solution";
-export { CaseStudy } from "./case-study";
-export { ExampleCaseStudy } from "./example-case-study";
+export { Features } from "./features";
+export { Benefits } from "./benefits";
+export { Analytics } from "./analytics";
+export { Testimonials } from "./testimonials";

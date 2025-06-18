@@ -6,7 +6,6 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-  Separator,
   Badge,
 } from "@/components/ui";
 import {
@@ -15,7 +14,6 @@ import {
   BarChart3,
   Settings,
   Brain,
-  Shield,
   ExternalLink,
 } from "lucide-react";
 
@@ -23,7 +21,6 @@ const TwibbioWidget = (): JSX.Element => {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-blue-950 dark:to-purple-950 rounded-xl">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section with SVG */}
         <div className="text-center space-y-8 mb-16">
           <Badge
             variant="secondary"
@@ -178,7 +175,6 @@ const TwibbioWidget = (): JSX.Element => {
           </div>
         </div>
 
-        {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <Card className="group hover:shadow-xl transition-all duration-300 border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm">
             <CardHeader className="text-center pb-4">
@@ -281,62 +277,6 @@ const TwibbioWidget = (): JSX.Element => {
               </CardDescription>
             </CardContent>
           </Card>
-        </div>
-
-        <Separator className="my-16" />
-
-        {/* How it Works Section */}
-        <div className="text-center space-y-12">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-100 dark:to-gray-300 bg-clip-text text-transparent font-heading">
-            How It Works
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-              <div className="relative bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-lg space-y-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto">
-                  <span className="text-3xl font-bold text-white">1</span>
-                </div>
-                <h3 className="text-2xl font-semibold">Quick Integration</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Copy our lightweight script and paste it into your website.
-                  The widget automatically adapts to your site's design and
-                  starts collecting feedback immediately.
-                </p>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-green-400 to-emerald-500 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-              <div className="relative bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-lg space-y-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto">
-                  <span className="text-3xl font-bold text-white">2</span>
-                </div>
-                <h3 className="text-2xl font-semibold">Smart Collection</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Users provide feedback through our intuitive interface. AI
-                  automatically categorizes responses and identifies key
-                  insights in real-time.
-                </p>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-400 to-pink-500 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-              <div className="relative bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-lg space-y-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto">
-                  <span className="text-3xl font-bold text-white">3</span>
-                </div>
-                <h3 className="text-2xl font-semibold">Actionable Results</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Access comprehensive analytics, generate reports, and
-                  transform feedback into marketing assets like testimonials and
-                  case studies.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

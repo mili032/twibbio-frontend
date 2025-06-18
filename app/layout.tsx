@@ -4,7 +4,6 @@ import { QueryProvider } from "@/providers";
 import { Header, Footer } from "@/components/shared";
 import { Plus_Jakarta_Sans as Inter } from "next/font/google";
 
-
 const font2 = Inter({
   display: "swap",
   preload: true,
@@ -19,18 +18,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-    <head>
-      <link
-        href="https://api.fontshare.com/v2/css?f[]=general-sans@700&display=swap"
-
-        rel="stylesheet" />
-    </head>
-    <body className={`${font2.className} antialiased`}>
-    <QueryProvider>
-      <Header />
-      {children}
-      <Footer/>
-    </QueryProvider>
+      <head>
+        <link
+          href="https://api.fontshare.com/v2/css?f[]=general-sans@700&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${font2.className} antialiased`}>
+        <QueryProvider>
+          <Header />
+          {children}
+          <Footer />
+        </QueryProvider>
       </body>
     </html>
   );
